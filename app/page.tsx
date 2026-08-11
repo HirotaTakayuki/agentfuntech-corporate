@@ -13,15 +13,15 @@ export default async function Page() {
     <>
       <section className={styles.top}>
         <div>
-          <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
+          <h1 className={styles.title}>技術で、企業の未来をつくる。</h1>
           <p className={styles.description}>
-            私たちは市場をリードしているグローバルテックカンパニーです。
+            Web・AI・DXで企業の課題を解決するエンジニア集団です。
           </p>
         </div>
         <Image
           className={styles.bgimg}
           src="/img-mv.jpg"
-          alt=""
+          alt="AgentFunTech - 技術で、企業の未来をつくる"
           width={3600}
           height={1200}
           priority
@@ -49,7 +49,7 @@ export default async function Page() {
           <Image
             className={styles.businessImg}
             src="/img-business.png"
-            alt=""
+            alt="AgentFunTechの事業内容"
             width={1024}
             height={1024}
           />
@@ -61,7 +61,7 @@ export default async function Page() {
             <Image
               className={styles.aboutusImg}
               src="/img-aboutus.jpg"
-              alt=""
+              alt="AgentFunTechについて"
               width={6000}
               height={4000}
             />
@@ -73,28 +73,29 @@ export default async function Page() {
               </p>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>社名</dt>
-                <dd className={styles.infoDescription}>株式会社Simple</dd>
+                <dd className={styles.infoDescription}>AgentFunTech</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>設立</dt>
-                <dd className={styles.infoDescription}>2023年4月</dd>
+                <dd className={styles.infoDescription}>2021年9月</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>所在地</dt>
                 <dd className={styles.infoDescription}>
-                  〒000-0000
+                  〒140-0014
                   <br />
-                  東京都渋谷区渋谷1-1-1
+                  東京都品川区大井7-18-1
                 </dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>代表者</dt>
-                <dd className={styles.infoDescription}>鈴木 太郎</dd>
+                <dd className={styles.infoDescription}>廣田 峻之</dd>
               </dl>
               <dl className={styles.info}>
                 <dt className={styles.infoTitle}>資本金</dt>
-                <dd className={styles.infoDescription}>1,000万円</dd>
+                <dd className={styles.infoDescription}>100万円</dd>
               </dl>
+              <ButtonLink href="/about">もっとみる</ButtonLink>
             </div>
           </div>
         </section>
@@ -109,12 +110,12 @@ export default async function Page() {
               <br />
               新しいアイデアを出し合い、成長する環境で活躍したい方は、ぜひご応募ください。当社でのキャリアを築きながら、技術の最前線で力を発揮しましょう。
             </p>
-            <ButtonLink href="">採用情報へ</ButtonLink>
+            <ButtonLink href="/recruit">採用情報へ</ButtonLink>
           </div>
           <Image
             className={styles.hiringImg}
             src="/img-hiring.jpg"
-            alt=""
+            alt="AgentFunTechの採用情報"
             width={960}
             height={960}
           />

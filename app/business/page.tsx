@@ -26,7 +26,7 @@ export default async function Page(props: Props) {
                 <dt className={styles.name}>
                   <Image
                     src={business.logo?.url as string}
-                    alt=""
+                    alt="事業ロゴ"
                     width={business.logo?.width}
                     height={business.logo?.height}
                     className={styles.logo}
@@ -41,7 +41,7 @@ export default async function Page(props: Props) {
               </dl>
               <Image
                 src={business.image?.url as string}
-                alt=""
+                alt={business.description}
                 width={business.image?.width}
                 height={business.image?.height}
                 className={styles.image}
@@ -53,7 +53,7 @@ export default async function Page(props: Props) {
       <div className={styles.footer}>
         <h2 className={styles.message}>We are hiring</h2>
         <p>私たちは共にチャレンジする仲間を募集しています。</p>
-        <ButtonLink href="">採用情報へ</ButtonLink>
+        <ButtonLink href="/recruit">採用情報へ</ButtonLink>
       </div>
     </div>
   );

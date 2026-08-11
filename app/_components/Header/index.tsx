@@ -8,11 +8,11 @@ export default function Header() {
     <header className={styles.header}>
       <Link href="/" className={styles.logoLink}>
         <Image
-          src="/logo.svg"
-          alt="SIMPLE"
+          src="/agentfuntech_cor.png"
+          alt="AgentFunTech"
           className={styles.logo}
-          width={348}
-          height={133}
+          width={1457}
+          height={248}
           priority
         />
       </Link>

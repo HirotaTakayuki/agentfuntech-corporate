@@ -16,7 +16,7 @@ export default function NewsListItem({ news }: Props) {
         {news.thumbnail ? (
           <Image
             src={news.thumbnail?.url}
-            alt=""
+            alt={news.title}
             className={styles.image}
             width={news.thumbnail?.width}
             height={news.thumbnail?.height}

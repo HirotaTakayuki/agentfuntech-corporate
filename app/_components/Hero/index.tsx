@@ -16,7 +16,7 @@ export default function Hero({ title, sub }: Props) {
       <Image
         className={styles.bgimg}
         src="/img-mv.jpg"
-        alt=""
+        alt={`${title} - AgentFunTech`}
         width={4000}
         height={1200}
         priority

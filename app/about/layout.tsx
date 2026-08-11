@@ -2,12 +2,12 @@ import Hero from '@/app/_components/Hero';
 import Sheet from '@/app/_components/Sheet';
 
 export const metadata = {
-  title: 'メンバー｜AgentFunTech',
+  title: '会社概要｜AgentFunTech',
   openGraph: {
-    title: 'メンバー｜AgentFunTech',
+    title: '会社概要｜AgentFunTech',
   },
   alternates: {
-    canonical: '/members',
+    canonical: '/about',
   },
 };
 
@@ -18,7 +18,7 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <>
-      <Hero title="Members" sub="メンバー" />
+      <Hero title="About" sub="会社概要" />
       <Sheet>{children}</Sheet>
     </>
   );
