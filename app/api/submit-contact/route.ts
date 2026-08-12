@@ -6,6 +6,11 @@ function validateEmail(email: string) {
   return pattern.test(email);
 }
 
+// メールヘッダー(件名・Reply-To)に使う値から改行を除去し、ヘッダーインジェクションを防ぐ
+function sanitizeHeaderValue(value: string) {
+  return value.replace(/[\r\n]+/g, ' ').trim();
+}
+
 export async function POST(request: NextRequest) {
   const json = await request.json();
   const { lastname, firstname, company, email, message } = json;
@@ -87,8 +92,8 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
       to: process.env.CONTACT_TO_EMAIL || process.env.GMAIL_USER,
-      replyTo: email,
-      subject: `【お問い合わせ】${company} 様より`,
+      replyTo: sanitizeHeaderValue(email),
+      subject: `【お問い合わせ】${sanitizeHeaderValue(company)} 様より`,
       text: [
         `姓: ${lastname}`,
         `名: ${firstname}`,
