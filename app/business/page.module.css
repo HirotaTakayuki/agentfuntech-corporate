@@ -9,11 +9,6 @@
   flex-direction: row-reverse;
 }
 
-.logo {
-  height: 40px;
-  width: auto;
-}
-
 .image {
   width: 240px;
   height: auto;
@@ -24,21 +19,15 @@
   flex: 1;
 }
 
-.name {
-  margin-bottom: 24px;
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .description {
   font-size: 0.9rem;
-}
-
-.action {
-  display: flex;
-  margin-top: 40px;
-}
-
-.list:nth-child(even) .action {
-  justify-content: flex-end;
+  white-space: pre-line;
 }
 
 .footer {
@@ -71,9 +60,5 @@
 
   .list:nth-child(even) {
     flex-direction: column-reverse;
-  }
-
-  .name {
-    text-align: center;
   }
 }

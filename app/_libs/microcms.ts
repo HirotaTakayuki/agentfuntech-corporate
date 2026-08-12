@@ -28,10 +28,12 @@ export type Member = {
   position: string;
   profile: string;
   image?: MicroCMSImage;
+  portfolioUrl?: string;
 };
 
 // 事業内容の型定義
 export type Business = {
+  title: string;
   logo?: MicroCMSImage;
   description: string;
   image?: MicroCMSImage;

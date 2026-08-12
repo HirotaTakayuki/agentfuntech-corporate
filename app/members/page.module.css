@@ -16,8 +16,22 @@
 
 .image {
   width: 240px;
-  height: auto;
-  border-radius: var(--border-radius);
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.imageLink {
+  display: block;
+  flex-shrink: 0;
+}
+
+.imagePlaceholder {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  flex-shrink: 0;
 }
 
 .name {
@@ -31,6 +45,7 @@
 
 .profile {
   font-size: 0.9rem;
+  white-space: pre-line;
 }
 
 .footer {

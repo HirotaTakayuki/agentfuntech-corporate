@@ -22,23 +22,10 @@ export default async function Page(props: Props) {
         <ul>
           {data.contents.map((business) => (
             <li key={business.id} className={styles.list}>
-              <dl className={styles.flex}>
-                <dt className={styles.name}>
-                  <Image
-                    src={business.logo?.url as string}
-                    alt="事業ロゴ"
-                    width={business.logo?.width}
-                    height={business.logo?.height}
-                    className={styles.logo}
-                  />
-                </dt>
-                <dd className={styles.description}>{business.description}</dd>
-                <dd className={styles.action}>
-                  <ButtonLink href={business.link} isExternal>
-                    サービスサイトへ
-                  </ButtonLink>
-                </dd>
-              </dl>
+              <div className={styles.flex}>
+                {business.title && <h3 className={styles.title}>{business.title}</h3>}
+                <p className={styles.description}>{business.description}</p>
+              </div>
               <Image
                 src={business.image?.url as string}
                 alt={business.description}

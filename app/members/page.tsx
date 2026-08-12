@@ -22,13 +22,34 @@ export default async function Page(props: Props) {
         <ul>
           {data.contents.map((member) => (
             <li key={member.id} className={styles.list}>
-              <Image
-                src={member.image?.url as string}
-                alt={member.name}
-                width={member.image?.width}
-                height={member.image?.height}
-                className={styles.image}
-              />
+              {member.image ? (
+                member.portfolioUrl ? (
+                  <a
+                    href={member.portfolioUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.imageLink}
+                  >
+                    <Image
+                      src={member.image.url}
+                      alt={member.name}
+                      width={member.image.width}
+                      height={member.image.height}
+                      className={styles.image}
+                    />
+                  </a>
+                ) : (
+                  <Image
+                    src={member.image.url}
+                    alt={member.name}
+                    width={member.image.width}
+                    height={member.image.height}
+                    className={styles.image}
+                  />
+                )
+              ) : (
+                <div className={styles.imagePlaceholder} aria-hidden="true" />
+              )}
               <dl>
                 <dt className={styles.name}>{member.name}</dt>
                 <dd className={styles.position}>{member.position}</dd>
