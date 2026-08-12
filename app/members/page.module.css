@@ -26,6 +26,14 @@
   flex-shrink: 0;
 }
 
+.imageLink .image {
+  transition: opacity 0.2s ease;
+}
+
+.imageLink:hover .image {
+  opacity: 0.75;
+}
+
 .imagePlaceholder {
   width: 240px;
   height: 240px;
